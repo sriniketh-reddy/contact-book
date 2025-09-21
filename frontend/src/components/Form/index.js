@@ -79,15 +79,15 @@ export default function Form(props) {
         <h2 className='text-center'>Add New Contact</h2>
         <form onSubmit={addConact} className="d-flex flex-column">
             <strong> <label htmlFor='name'>Name:</label> </strong>
-            <input className="w-100 mb-2" type="text" id="name" placeholder="Name" required onChange={(e)=>{
+            <input className="w-100 mb-2" type="text" id="name" placeholder="Name" value={name} required onChange={(e)=>{
                 setName(e.target.value);
             }}/>
             <strong> <label htmlFor='email'>Email:</label> </strong> 
-            <input className="w-100 mb-2" type="email" id="email" placeholder="Email" required onChange={async (e)=>{
+            <input className="w-100 mb-2" type="email" id="email" placeholder="Email" value={email} required onChange={async (e)=>{
                 setEmail(e.target.value);
             }}/>
             <strong> <label htmlFor='phone'>Phone:</label> </strong> 
-            <input className="w-100 mb-2" type="tel" id="phone" placeholder="Phone" required onChange={async (e)=>{
+            <input className="w-100 mb-2" type="tel" id="phone" placeholder="Phone" value={phone} required onChange={async (e)=>{
                 setPhone(e.target.value);
             }}/>
             {error && <p style={{color: 'red', fontSize: '12px'}}>{error}</p>}
