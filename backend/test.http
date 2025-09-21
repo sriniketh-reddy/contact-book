@@ -1,0 +1,14 @@
+POST http://localhost:5000/contacts/
+Content-Type: application/json
+
+{ 
+    "name": "John", 
+    "email": "john@example.com", 
+    "phone": "1234567890" 
+}
+
+###
+GET http://localhost:5000/contacts/?limit=5&page=1
+
+###
+DELETE http://localhost:5000/contacts/1c18421b-3220-4de3-b36b-8449d238c553/
