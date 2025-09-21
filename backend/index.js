@@ -7,13 +7,12 @@ let db = null;
 const app = express();
 app.use(cors());
 app.use(express.json());
-const BASE_URL = process.env.BASE_URL || "http://localhost:5000/";
 
 const startServer = async () => {
     try{
         db = await initDB();
         app.listen(5000, () => {
-            console.log(`Server Running at ${BASE_URL}`);
+            console.log(`Server Running`);
         });
     }
     catch(e) {
